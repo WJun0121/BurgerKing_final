@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>漢堡王 | 豪點王 線上訂餐</title>
+    <link rel="shortcut icon" href="images/BurgerKing_logo.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 手機版縮放 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style_order online.css">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/">
+    <link rel="stylesheet" href="css/style_bootstrap.min.css">
+    <!-- 日期 -->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <style>
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .ui-datepicker {
+            width: 220px;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper section">
+        <!-- 訂餐 導覽列 -->
+        <nav class="navbar navbar-expand-lg navbar-dark" style=" vertical-align:middle;">
+            <div class="navbar-brand-group" style=" vertical-align:middle;">
+                <a class="navbar-brand" href="index.html" target="_blank" style="vertical-align:middle;">
+                    <img class="nav-list-item" src="./images/BurgerKing_logo.svg" alt="LOGO">
+                </a>
+                <a class="navbar-brand-2" href="index_order online.html" style="vertical-align:middle;">
+                    <img class="nav-list-item-king" src="./images/豪點王_3.png" alt="king-LOGO">
+                    線上訂餐
+                </a>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="vertical-align:middle;">
+                <ul class="navbar-nav ml-auto" style=" vertical-align:middle;">
+                    <li class="nav-item text-center">
+                        <a class="nav-link" href="#">
+                            <div class="track">追蹤我的訂單</div>
+                        </a>
+                    </li>
+                    <li class="nav-item text-center">
+                        <a class="nav-link2" href="#">
+                            <img src="images/user.svg" onmousemove="this.src='images/user2.svg';"
+                                onmouseout="this.src='images/user.svg';" alt="user" class="right-img">
+                        </a>
+                    </li>
+                    <li class="nav-item text-center">
+                        <a class="nav-link2" href="#">
+                            <img src="images/shopping cart.svg" onmousemove="this.src='images/shopping cart2.svg';"
+                                onmouseout="this.src='images/shopping cart.svg';" alt="shopping_cart" class="right-img">
+                        </a>
+                    </li>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="content-area section">
+            <!--訂餐列表 -->
+            <div class="order" id="section1">
+                <div class="container mx-auto">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                            <ul class="order-list">
+                                <li class="order-item-this">選擇時間</li>
+                                <li class="order-item-this">&raquo</li>
+                                <li class="order-item">訂購點餐</li>
+                                <li class="order-item">&raquo</li>
+                                <li class="order-item">付款方式</li>
+                                <li class="order-item">&raquo</li>
+                                <li class="order-item">訂餐完成</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 訂餐選項 -->
+            <div class="options" id="section2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="options_big_group">
+                                <div class="options_group">
+                                    <script alt="clock" class="options-img"
+                                        src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                                    <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_kmty0oii.json"
+                                        background="rgba(0, 0, 0, 0)" speed="1"
+                                        style="width: 7em;  height:7em;  margin: -16px 0px 0px  -30px;" loop autoplay>
+                                    </lottie-player>
+                                    <div class="datetest">
+                                        <div class="options-text">
+                                            取餐時間<input type="text" id="datepicker" value="" name='datepicker'>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 取餐方式 -->
+                                <div class="options_group">
+                                    <script alt="car" class="options-img"
+                                        src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                                    <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_zie6ufoi.json"
+                                        background="transparent" speed="1"
+                                        style="width: 7em;  height:7em;  margin: -20px 0px -30px  -30px;" loop autoplay>
+                                    </lottie-player>
+                                    <div class="options-text">
+                                        取餐方式
+                                    </div>
+                                    <div class="way_group_item_1">
+                                        自取
+                                    </div>
+                                    <div class="way_group_item_2">
+                                        外送
+                                    </div>
+                                </div>
+                                <!-- 地址 -->
+                                <div class="adders-group-big">
+                                    <div class="adders-group">
+                                        <div class="twzipcode_group">
+                                            <div id="twzipcode"></div>
+                                        </div>
+                                    </div>
+                                    <div class="adders-group2">
+                                        <label>
+                                            <input class="label" name="label" type="text" value="請輸入地址">
+                                        </label>
+                                        <select class="label2" name="favoriteColor" value="請選擇門市">
+                                            <option value=“store0">請選擇門市</option>
+                                            <option value=“store1">光華店</option>
+                                            <option value="store2">公館店</option>
+                                            <option value="store3"> 微風北車店</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 開始按鈕 -->
+            <div class="start" id="section3">
+                <div class="container mx-auto">
+                    <div class="row">
+                        <div class="start-button col-2 col-sm-3 col-md-3 col-lg-2 text-center">
+                            開始訂餐
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 頁腳 -->
+        <footer class>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <hr class="footer_line">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-left">
+                        <span>線上訂餐 | 注意事項</span>
+                        <br>
+                        <p>
+                            1.優惠券商品為特殊折扣，恕不提供特製、更換與加價升級等選項;官網訂餐目前無提供客製化服務。<br>
+                            2.疫情期間僅部分門市提供外送服務，詳情請依訂餐頁面之選項為主，如有不便敬請見諒。<br>
+                            3.部分店家不供應滿額贈品黃金雞翅，店家會協助更換等值商品。<br>
+                            4.官網訂餐提供全天候預約訂購7日內餐點的服務；實際可供餐時間則以餐廳營運時間為準。<br>
+                        </p>
+                    </div>
+                    <div class="col-12 text-center">
+                        <p class="Copyright">Copyright © 2021 Burger King 漢堡王</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="js/script_order online.js"></script>
+    <script src="js/jQuery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- 日期 -->
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <!-- 地址 -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery-twzipcode@1.7.14/jquery.twzipcode.min.js"></script>
+</body>
+
+</html>
