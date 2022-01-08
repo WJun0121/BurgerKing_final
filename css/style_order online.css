@@ -1,0 +1,428 @@
+html{
+  box-sizing: border-box;
+  font-size: 62.5%; 
+}
+
+*,*:before, *:after{
+  box-sizing:inherit;
+}
+
+html, body {
+  height: 100%;
+  width:100%;
+  margin: 0;
+  background-color: #f5ebdc;
+}
+
+body {
+  display: flex; /*使物件依序排列*/
+  flex-direction: column; /*使物件垂直排列*/
+}
+
+.wrapper {
+  height:100vh;
+  display: flex;
+  flex-direction:column;
+}
+
+.content-area{
+  background-color: #f5ebdc;
+  flex:1;
+  padding-top: 20px ;
+  padding-bottom: 30px;
+}
+
+img{
+  cursor:pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul{
+  list-style:none;
+  padding-left: 0; 
+}
+
+/* 訂餐 導覽列 */
+
+@media (min-width: 768px) {
+/*nav選單*/
+	.navbar{
+	padding-left:180px!important;
+	padding-right:180px!important; 
+}
+}
+
+.navbar-dark{
+  background-color:#ff8732;
+}
+
+.navbar-brand-group{
+  padding: 8px;
+  margin-right: 4px;
+}
+
+.nav-list-item{
+  width:65px;
+  margin-right: 4px;
+}
+
+.nav-list-item-king{
+  width:140px;
+  margin-right: 4px;
+}
+
+.navbar-brand-2{
+  font-size: 2.6em ;
+  font-weight: 700;
+  font-family:Arial;
+  color:#fff;
+  margin-right: 4px;
+  text-decoration: none;
+}
+
+.navbar-brand-2:hover{
+  font-size: 2.6em ;
+  font-weight: 700;
+  font-family:Arial;
+  color:#fff;
+  text-decoration: none;
+}
+
+.track{
+  color:#fff;
+}
+
+.collapse{
+  justify-content: center;
+  align-items: center; 
+}
+
+.nav-item{
+  font-size: 2.1em ;
+  font-weight: 700;
+  font-family:Arial;
+  margin: 2px;
+  padding: 7px;
+}
+
+.right-img{
+  width:33px;
+  margin: auto;
+}
+
+.nav-link:hover{
+  background-color: #d62300;
+  border-radius: 6px;
+}
+
+/* 訂餐列表 */
+.order{
+  background-color: #f5ebdc;
+  margin: 20px auto 10px auto;
+}
+
+.order-list{
+  background-color:#d62300;
+  border-radius: 6px;
+  margin-top:20px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.order-item-this{
+  font-size: 2.3em;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  font-family:Arial;
+  color:#ffff;
+  margin: auto 20px;
+}
+
+.order-item{
+  font-size: 2.3em ;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  font-family:Arial;
+  color:#ebbfa8;
+  margin: auto 20px;
+  white-space:pre-wrap;
+}
+
+/* 訂餐選項 */
+.options{
+  background-color: #f5ebdc;
+  margin: 0 auto;
+}
+
+.options{
+  text-align: center;
+  vertical-align:middle;
+}
+
+.options_big_group{
+  display: inline-block;
+  text-align: left;
+}
+
+.options_group{
+  display: flex;
+  margin: 18px;
+}
+
+.options-img{
+  margin-right:30px;
+  width:30px;
+}
+
+.options-text{
+  margin-right:30px;
+  font-size: 2.6em ;
+  font-weight: 570;
+  font-family:Arial;
+  color: #512314;
+  text-decoration: none;
+}
+
+#datepicker{
+  font-family: Arial;
+  font-size: 0.9em;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #512314;
+  width: 220px;
+  border-radius: 4px;
+  border: 2px solid rgb(155, 155, 155);
+  margin: 0 0 0 30px;
+}
+
+/* 取餐方式 */
+.way_group_item_1{
+  cursor:pointer;
+  margin-right: 18px;
+  background-color: #ff8732;
+  border-radius: 4px;
+  font-family: Arial;
+  font-size: 2.4em;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+  padding: 0 40px;
+}
+
+.way_group_item_2{
+  cursor:pointer;
+  background-color: #ff8732;
+  border-radius: 4px;
+  font-family: Arial;
+  font-size: 2.4em;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+  padding: 0 40px;
+}
+
+/* 自取外送輸入 */
+.adders-group-big{
+  display: none;
+  margin-bottom: -30px;
+}
+
+.twzipcode_group{
+  margin: 0px 0px 50px 186px;
+}
+
+.adders-group2{
+  margin: -40px 0px 50px 186px;
+}
+
+.addr-county{
+  font-family: Arial;
+  font-size: 2em;
+  font-weight: 540;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #512314;
+  width: 132px;
+  height: 40px;
+  border-radius: 4px;
+  border: 2px solid rgb(155, 155, 155);
+  margin-right: 14px;
+  margin-bottom: 10px;
+}
+
+.addr-area{
+  font-family: Arial;
+  font-size: 2em;
+  font-weight: 540;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #512314;
+  width: 132px;
+  height: 40px;
+  border-radius: 4px;
+  border: 2px solid rgb(155, 155, 155);
+  margin-bottom: 10px;
+}
+
+.addr-zip{
+  display:none;
+}
+
+.label{
+  font-family: Arial;
+  font-size: 2em;
+  font-weight: 540;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #512314;
+  width: 278px;
+  height: 40px;
+  border-radius: 4px;
+  border: 2px solid rgb(155, 155, 155);
+  margin-bottom: 10px;
+}
+
+.label2{
+  font-family: Arial;
+  font-size: 2em;
+  font-weight: 540;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #512314;
+  width: 278px;
+  height: 40px;
+  border-radius: 4px;
+  border: 2px solid rgb(155, 155, 155);
+  margin-bottom: 10px;
+}
+
+/* 開始按鈕 */
+.start{
+  background-color: #f5ebdc;
+  margin: 0 auto;
+}
+
+.start-button{
+  cursor:pointer;
+  background-color:#d62300;
+  font-size: 2.4em ;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  font-family:Arial;
+  color:#ffff;
+  margin-bottom: 15px;
+  width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 6px;
+  padding: 5px;
+  
+}
+
+.start-button:hover{
+  background-color: #b41e00;
+  color:#f5ebdc;
+}
+
+  /* 頁腳 */
+  footer {
+    background-color:#512314;
+    padding:20px 0; 
+  }
+  
+  .footer_line {
+    margin-right: -15px;
+    margin-left: -15px;
+    height: 4px;
+    background-color: #f5ebdc;
+    margin-top: 10px;
+  }
+  
+  footer span{
+    font-style: normal;
+    font-size: 1.8em ;
+    font-weight: 600;
+    line-height: 30px;
+    margin-bottom: 15px;
+    color:#fff;
+  }
+  
+  footer p{
+    font-style: normal;
+    font-size: 1.6em ;
+    font-weight: 500;
+    line-height: 30px;
+    margin-bottom: 15px;
+    color:#fff;
+  }
+  
+  .Copyright{
+    font-style: normal;
+    font-size: 1em;
+    font-weight:100;
+    margin-bottom: -10px;
+    color:#f5ebdc;
+  }
+  
+  /* 回到頂端 */
+  .toTop-arrow {
+      width: 5rem;
+      height: 5rem;
+      padding: 0;
+      margin: 0;
+      border: 0;
+      border-radius: 33%;
+      opacity: 0.6;
+      background: #000;
+      cursor: pointer;
+      position:fixed;
+      right: 1rem;
+      bottom: 1rem;
+      display: none;
+  }
+  .toTop-arrow::before, .toTop-arrow::after {
+      width: 30px;
+      height: 7px;
+      border-radius: 3px;
+      background: #f90;
+      position: absolute;
+      content: "";
+  }
+  .toTop-arrow::before {
+      transform: rotate(-45deg) translate(0, -50%);
+      left: 0.4rem;
+  }
+  .toTop-arrow::after {
+      transform: rotate(45deg) translate(0, -50%);
+      right: 0.4rem;
+  }
+  .toTop-arrow:focus {outline: none;}
